@@ -1,130 +1,343 @@
-☁️ AWS Security Mastery
+<!-- ===================== HEADER BANNER ===================== -->
+<div align="center">
 
-Learn AWS Cloud Security from Beginner to Advanced | Hands-on Labs | Real-World Projects | DevSecOps
-!AWS Security !Learning !Hands-On !Status !License
+<img src="https://capsule-render.vercel.app/api?type=waving&color=0:0f0c29,50:302b63,100:24243e&height=220&section=header&text=Pentester%20Portfolio&fontSize=58&fontColor=00ff9c&animation=fadeIn&fontAlignY=36&desc=WAPT%20%7C%20Network%20Security%20%7C%20Labs%20%7C%20Reports&descSize=20&descColor=ffffff&descAlignY=58" alt="Pentester Portfolio banner" />
 
-📌 About This Repository
-Welcome to AWS Security Mastery!
+<a href="https://git.io/typing-svg">
+  <img src="https://readme-typing-svg.demolab.com?font=Fira+Code&weight=600&size=22&duration=3500&pause=1000&color=00FF9C&center=true&vCenter=true&width=700&lines=Think+like+an+attacker.;Report+like+a+professional.;Learning+by+doing.;Every+finding+ends+with+a+fix." alt="Typing animation" />
+</a>
 
-This repository is my practical learning journey into AWS Cloud Security, covering fundamental concepts, security best practices, hands-on labs, real-world scenarios, and advanced cloud security projects.
+<br/>
 
-The primary goal is to develop practical skills required to understand, secure, monitor, and protect AWS cloud environments.
+![Focus](https://img.shields.io/badge/FOCUS-PENETRATION%20TESTING-ff3b3b?style=for-the-badge&logo=hackthebox&logoColor=white)
+![WAPT](https://img.shields.io/badge/WAPT-OWASP%20TOP%2010-ff9800?style=for-the-badge&logo=owasp&logoColor=white)
+![Network](https://img.shields.io/badge/NETWORK-SECURITY-2196f3?style=for-the-badge&logo=cisco&logoColor=white)
 
-This is not just a collection of notes. It is a structured, hands-on learning repository designed to demonstrate practical cloud security knowledge.
+![Kali](https://img.shields.io/badge/Kali_Linux-557C94?style=flat-square&logo=kalilinux&logoColor=white)
+![Burp](https://img.shields.io/badge/Burp_Suite-FF6633?style=flat-square&logo=burpsuite&logoColor=white)
+![Python](https://img.shields.io/badge/Python-3776AB?style=flat-square&logo=python&logoColor=white)
+![Docker](https://img.shields.io/badge/Docker-2496ED?style=flat-square&logo=docker&logoColor=white)
+![Git](https://img.shields.io/badge/Git-F05032?style=flat-square&logo=git&logoColor=white)
+![Status](https://img.shields.io/badge/Status-Under_Development-yellow?style=flat-square)
+![License](https://img.shields.io/badge/License-MIT-green?style=flat-square)
 
-🎯 Learning Objectives
-Understand AWS Cloud Security fundamentals.
-Master AWS Identity and Access Management (IAM).
-Design secure AWS network architectures.
-Implement cloud data protection and encryption.
-Monitor and detect suspicious cloud activities.
-Understand AWS incident response.
-Learn DevSecOps and Infrastructure as Code security.
-Build practical AWS Security projects.
-Prepare for Cloud Security Engineer interviews.
-🗺️ Learning Roadmap
+<p>
+  <a href="#-about">About</a> •
+  <a href="#-roadmap">Roadmap</a> •
+  <a href="#-tools">Tools</a> •
+  <a href="#-labs--writeups">Labs</a> •
+  <a href="#-reports">Reports</a> •
+  <a href="#-projects">Projects</a> •
+  <a href="#-certifications">Certifications</a> •
+  <a href="#-contact">Contact</a>
+</p>
 
-Module	Topic	Status
-00	Prerequisites	⬜ Not Started
-01	AWS Security Fundamentals	⬜ Not Started
-02	IAM Security	⬜ Not Started
-03	Network Security	⬜ Not Started
-04	Data Protection	⬜ Not Started
-05	Detection & Monitoring	⬜ Not Started
-06	Application Security	⬜ Not Started
-07	Incident Response	⬜ Not Started
-08	DevSecOps	⬜ Not Started
-09	Advanced AWS Security	⬜ Not Started
-10	Real-World Projects	⬜ Not Started
-11	Interview Preparation	⬜ Not Started
-12	Resources & Cheat Sheets	⬜ Not Started
-🛠️ Technologies & Tools
-The repository will cover:
+</div>
 
-Amazon Web Services (AWS)
-AWS IAM
-AWS VPC
-AWS S3
-AWS KMS
-AWS CloudTrail
-Amazon GuardDuty
-AWS Security Hub
-Amazon Inspector
-AWS Config
-AWS CLI
-Python
-Terraform
-Docker
-Git & GitHub
-GitHub Actions
-Checkov
-Trivy
-Prowler
-🧪 Hands-on Learning Approach
-Every major topic will include:
+---
 
-Concept explanation
-Architecture diagrams
-Real-world use cases
-Security risks and misconfigurations
-Step-by-step practical labs
-AWS CLI examples
-Security validation
-Remediation techniques
-Troubleshooting
-Interview questions
-🚀 Real-World Projects
-The planned portfolio projects include:
+## 📌 About
 
+> **This is not just a notes dump.** It is a structured, hands-on portfolio that shows how I find, exploit (ethically), report, and help fix security weaknesses in **web applications** and **networks**.
 
-Project	Description
-Secure S3 Architecture	Build and validate a secure S3 storage architecture
-IAM Security Audit	Review IAM permissions and identify excessive access
-Cloud Threat Detection	Build a detection workflow using AWS security services
-Secure VPC Architecture	Design a secure AWS network
-Automated Security Monitoring	Automate security finding monitoring and notifications
-📚 Learning Resources
-AWS Security Documentation
-AWS Well-Architected Security Pillar
-AWS IAM Documentation
-AWS Security Workshops
-AWS Skill Builder
-📅 Learning Timeline
-Planned duration: 16 Weeks
+<table>
+<tr>
+<td width="50%" valign="top">
 
-The curriculum will follow a structured weekly learning schedule, moving from foundational AWS concepts to advanced cloud security and practical projects.
+### 🌐 Web App Pentesting (WAPT)
+- OWASP Top 10 testing
+- Authentication & session flaws
+- SQLi, XSS, CSRF, SSRF, XXE
+- IDOR & broken access control
+- API security testing
+- Business logic flaws
 
-📊 My Learning Progress
-Complete AWS Fundamentals
-Complete IAM Security
-Complete Network Security
-Complete Data Protection
-Complete Detection & Monitoring
-Complete Application Security
-Complete Incident Response
-Complete DevSecOps
-Complete Advanced AWS Security
-Complete Real-World Projects
-Complete Interview Preparation
-🔐 Security Disclaimer
-This repository is intended strictly for educational and defensive cloud security purposes.
+</td>
+<td width="50%" valign="top">
 
-All practical exercises must be performed only in AWS accounts and environments that I own or have explicit authorization to test.
+### 🔌 Network Security
+- Scanning & enumeration
+- Vulnerability assessment
+- Sniffing & MITM
+- Password attacks
+- Active Directory basics
+- Linux & Windows privilege escalation
 
-Never upload AWS access keys, secret keys, passwords, or sensitive information to this repository.
+</td>
+</tr>
+</table>
 
-Always review potential AWS costs and clean up lab resources after completing exercises.
+### 👤 Me
 
-🤝 Contributions
-Suggestions, improvements, documentation corrections, and educational contributions are welcome.
+| | |
+|---|---|
+| 🧑 **Name** | `<Your Name>` |
+| 🎯 **Focus** | Web & Network Penetration Testing |
+| 📚 **Currently learning** | `<eJPT / PNPT / OSCP path>` |
+| 📍 **Based in** | `<City, Country>` |
 
-Please read CONTRIBUTING.md before contributing.
+---
 
-📜 License
-This project is licensed under the MIT License.
+## 🎯 Learning Objectives
 
-Learning by Doing | Building Practical AWS Security Skills
+<details open>
+<summary><b>Click to collapse / expand</b></summary>
 
-⭐ If you find this repository useful, consider giving it a star!
+- ✅ Pentesting methodologies: **PTES, OWASP WSTG, NIST SP 800-115**
+- ✅ Test every **OWASP Top 10** category
+- ✅ Exploit safely in **authorized lab environments**
+- ✅ Write **professional reports** with remediation
+- ✅ Map findings to **CVSS, CWE, OWASP, MITRE ATT&CK**
+- ✅ Build small security tools in **Python / Bash**
+- ✅ Prepare for **interviews and certifications**
 
-Repository Status: 🚧 Actively Under Development
+</details>
+
+---
+
+## 🗺️ Roadmap
+
+```mermaid
+flowchart LR
+    A[🧭 Methodology<br/>& Ethics] --> B[🧪 Home Lab<br/>Setup]
+    B --> C[🌐 WAPT<br/>OWASP Top 10]
+    B --> D[🔌 Network<br/>Security]
+    C --> E[📝 Reporting]
+    D --> E
+    E --> F[🚀 Projects]
+    F --> G[🏆 Certifications<br/>& Interviews]
+```
+
+<details>
+<summary><b>🌐 Web Application Pentesting modules</b></summary>
+
+| # | Module | Status |
+|---|--------|:------:|
+| 01 | Recon & Information Gathering | ⬜ |
+| 02 | Authentication & Session Management | ⬜ |
+| 03 | Injection (SQLi, XSS, Command) | ⬜ |
+| 04 | Broken Access Control & IDOR | ⬜ |
+| 05 | CSRF, SSRF, XXE | ⬜ |
+| 06 | File Upload, LFI/RFI | ⬜ |
+| 07 | API Security Testing | ⬜ |
+| 08 | Business Logic Flaws | ⬜ |
+
+</details>
+
+<details>
+<summary><b>🔌 Network Security modules</b></summary>
+
+| # | Module | Status |
+|---|--------|:------:|
+| 09 | Networking Fundamentals (TCP/IP, OSI) | ⬜ |
+| 10 | Scanning & Enumeration (Nmap) | ⬜ |
+| 11 | Vulnerability Assessment | ⬜ |
+| 12 | Sniffing & MITM (Wireshark) | ⬜ |
+| 13 | Password Attacks & Hashing | ⬜ |
+| 14 | Active Directory Basics | ⬜ |
+| 15 | Privilege Escalation (Linux & Windows) | ⬜ |
+| 16 | Wireless Security | ⬜ |
+| 17 | Hardening & Defense | ⬜ |
+
+</details>
+
+> **Legend:** ⬜ Not started &nbsp;•&nbsp; 🟨 In progress &nbsp;•&nbsp; ✅ Completed
+
+### 📊 Progress
+
+![WAPT](https://img.shields.io/badge/WAPT-0%25-red?style=for-the-badge)
+![Network](https://img.shields.io/badge/Network-0%25-red?style=for-the-badge)
+![Reports](https://img.shields.io/badge/Reports-0%25-red?style=for-the-badge)
+![Projects](https://img.shields.io/badge/Projects-0%25-red?style=for-the-badge)
+
+---
+
+## 🛠️ Tools
+
+<div align="center">
+
+<img src="https://skillicons.dev/icons?i=linux,python,bash,docker,git,github,vscode,wireshark&theme=dark" alt="Tech icons" />
+
+</div>
+
+| Category | Tools |
+|----------|-------|
+| 🖥️ **Lab** | Kali Linux, VirtualBox / VMware, Docker |
+| 🌐 **Web** | Burp Suite, OWASP ZAP, ffuf, Gobuster, sqlmap, Nikto, Nuclei |
+| 🔌 **Network** | Nmap, Wireshark, Metasploit, Netcat, Hydra, John / Hashcat, Responder |
+| 💻 **Scripting** | Python, Bash |
+
+---
+
+## 🧪 Practice Environments
+
+> Only **legal, authorized** targets are used.
+
+| Platform | Type |
+|----------|------|
+| 🧱 DVWA | Local vulnerable web app |
+| 🧃 OWASP Juice Shop | Local vulnerable web app |
+| 🎓 WebGoat | Guided web security lessons |
+| 🔬 PortSwigger Academy | Free web security labs |
+| 🟢 TryHackMe | Guided rooms |
+| 🟩 HackTheBox | Machines & challenges |
+| 💀 Metasploitable / VulnHub | Vulnerable VMs |
+| 🏠 Home Lab | My own isolated VMs |
+
+---
+
+## 📁 Repository Structure
+
+<details>
+<summary><b>Click to view folder tree</b></summary>
+
+```text
+pentester-portfolio/
+├── 00-methodology/                # PTES, WSTG, NIST 800-115, legal & ethics
+├── 01-wapt/
+│   ├── notes/                     # Web pentesting learning material
+│   ├── labs/                      # DVWA, Juice Shop, WebGoat, PortSwigger
+│   ├── tools/                     # Burp, ZAP, ffuf, sqlmap, nuclei
+│   └── reports/
+├── 02-network-security/
+│   ├── notes/                     # Scanning, sniffing, AD, privesc, wireless
+│   ├── labs/                      # Nmap, Wireshark, Metasploitable, HTB, THM
+│   ├── tools/
+│   └── reports/
+├── 03-lab-reports/
+│   ├── templates/                 # Lab, full pentest, executive summary
+│   └── sample-report-dvwa.md
+├── 04-cheatsheets/
+├── 05-scripts/                    # My own Python / Bash tools
+├── 06-certifications-and-roadmap/
+├── assets/
+└── .github/
+```
+
+</details>
+
+---
+
+## 🧪 Labs & Writeups
+
+| # | Lab / Machine | Platform | Category | Difficulty | Writeup |
+|:-:|---------------|----------|----------|:----------:|:-------:|
+| 1 | _Coming soon_ | – | – | – | – |
+
+---
+
+## 📄 Reports
+
+| Report | Scope | Key Findings | Link |
+|--------|-------|--------------|:----:|
+| 🧱 Sample: DVWA | Local lab | SQLi, XSS | [View](03-lab-reports/sample-report-dvwa.md) |
+
+Every report contains: **Executive Summary → Methodology → Findings table (Severity, CVSS, CWE/OWASP) → Evidence/PoC → Impact → Remediation → References**.
+
+---
+
+## 🚀 Projects
+
+| Project | Description | Status |
+|---------|-------------|:------:|
+| 🧱 DVWA Full Pentest Report | Professional report: SQLi, XSS and more | 📅 Planned |
+| 🧃 Juice Shop Assessment | Full OWASP Top 10 test | 📅 Planned |
+| 🏠 Internal Network Pentest | Scan, enumerate, exploit, report | 📅 Planned |
+| 🏰 AD Attack Chain Lab | Enumeration to domain compromise, with detections | 📅 Planned |
+| 🐍 Custom Port Scanner | Python tool with documentation | 📅 Planned |
+| 🛡️ Detection Lab | Detect my own attacks with Suricata / logs | 📅 Planned |
+
+---
+
+## 🏆 Certifications
+
+| Certification | Status |
+|---------------|:------:|
+| CompTIA Security+ | 📅 Planned |
+| eJPT | 📅 Planned |
+| PNPT | 📅 Planned |
+| CEH | 📅 Planned |
+| OSCP | 📅 Planned |
+
+---
+
+## 📅 Timeline: 16 Weeks
+
+| Weeks | Focus |
+|:-----:|-------|
+| 1-2 | Methodology, lab setup, networking basics |
+| 3-8 | Web Application Pentesting (OWASP Top 10) |
+| 9-13 | Network pentesting, AD, privilege escalation |
+| 14-15 | Full pentest projects & reporting |
+| 16 | Portfolio polish & interview prep |
+
+---
+
+## ✅ My Progress
+
+- [ ] Methodology, Legal & Ethics
+- [ ] Home Lab Setup
+- [ ] WAPT: Recon, Auth, Injection
+- [ ] WAPT: Access Control, CSRF/SSRF/XXE, File Upload
+- [ ] WAPT: API & Business Logic
+- [ ] Network: Scanning, Enumeration, Vuln Assessment
+- [ ] Network: Sniffing, Password Attacks
+- [ ] Network: Active Directory & Privilege Escalation
+- [ ] Network: Wireless & Hardening
+- [ ] Professional Reports
+- [ ] Real-World Projects
+- [ ] Interview Preparation
+
+---
+
+## 📚 Resources
+
+[![OWASP](https://img.shields.io/badge/OWASP-WSTG-000000?style=flat-square&logo=owasp)](https://owasp.org/www-project-web-security-testing-guide/)
+[![PortSwigger](https://img.shields.io/badge/PortSwigger-Academy-FF6633?style=flat-square&logo=burpsuite&logoColor=white)](https://portswigger.net/web-security)
+[![TryHackMe](https://img.shields.io/badge/TryHackMe-212C42?style=flat-square&logo=tryhackme&logoColor=white)](https://tryhackme.com)
+[![HackTheBox](https://img.shields.io/badge/HackTheBox-9FEF00?style=flat-square&logo=hackthebox&logoColor=black)](https://www.hackthebox.com)
+[![MITRE](https://img.shields.io/badge/MITRE-ATT%26CK-red?style=flat-square)](https://attack.mitre.org)
+[![HackTricks](https://img.shields.io/badge/HackTricks-Book-black?style=flat-square)](https://book.hacktricks.xyz)
+
+---
+
+## 📬 Contact
+
+<div align="center">
+
+[![LinkedIn](https://img.shields.io/badge/LinkedIn-0A66C2?style=for-the-badge&logo=linkedin&logoColor=white)](https://linkedin.com/in/your-profile)
+[![TryHackMe](https://img.shields.io/badge/TryHackMe-212C42?style=for-the-badge&logo=tryhackme&logoColor=white)](https://tryhackme.com/p/your-profile)
+[![HackTheBox](https://img.shields.io/badge/HackTheBox-9FEF00?style=for-the-badge&logo=hackthebox&logoColor=black)](https://app.hackthebox.com/profile/your-id)
+[![Email](https://img.shields.io/badge/Email-D14836?style=for-the-badge&logo=gmail&logoColor=white)](mailto:your-email@example.com)
+
+</div>
+
+---
+
+## ⚠️ Legal Disclaimer
+
+> [!WARNING]
+> This repository is for **educational and defensive security purposes only**.
+>
+> - Test **only** systems I own or have **explicit written authorization** to test.
+> - Unauthorized access is illegal.
+> - Never upload real credentials, API keys, client data, real IPs, or sensitive screenshots.
+> - Follow each platform's rules (do not publish write-ups of active HackTheBox machines).
+> - The author is not responsible for misuse of this information.
+
+---
+
+## 🤝 Contributing & License
+
+Suggestions and corrections are welcome. Please read [`CONTRIBUTING.md`](CONTRIBUTING.md) first.
+Licensed under the **MIT License**.
+
+<div align="center">
+
+⭐ **If you find this repository useful, consider giving it a star!** ⭐
+
+**Repository Status:** 🚧 Actively Under Development
+
+<img src="https://capsule-render.vercel.app/api?type=waving&color=0:24243e,50:302b63,100:0f0c29&height=120&section=footer" alt="footer" />
+
+</div>
