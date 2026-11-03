@@ -1,0 +1,312 @@
+
+# Amazon GuardDuty – Finding Investigation and Reporting
+
+## 1. Introduction
+
+Amazon GuardDuty is an AWS managed threat detection service that continuously monitors AWS environments to identify malicious activities, suspicious behavior, and potential security threats.
+
+When GuardDuty detects suspicious activity, it generates a **Security Finding**.
+
+A finding provides information about the detected activity, affected AWS resources, severity, and potential security risks.
+
+However, every finding does not necessarily indicate a security breach. It must be investigated and classified before taking corrective action.
+
+---
+
+## 2. GuardDuty Finding Investigation Process
+
+When a GuardDuty finding is generated, follow these steps:
+
+1. Review the finding.
+2. Analyze the severity level.
+3. Identify the affected AWS resource.
+4. Investigate the suspicious activity.
+5. Correlate the finding with relevant logs.
+6. Classify the finding.
+7. Report the incident if necessary.
+8. Take corrective and preventive actions.
+
+---
+
+## 3. Criteria for Investigating GuardDuty Findings
+
+The following criteria should be considered while investigating a GuardDuty finding.
+
+| Criteria | What to Investigate |
+|---|---|
+| Severity | Is the finding Low, Medium, High, or Critical? |
+| Finding Type | What kind of suspicious activity was detected? |
+| Affected Resource | Which EC2, IAM, S3, or other resource is involved? |
+| Source IP | Is the source IP address known or suspicious? |
+| Geographic Location | Is the activity originating from an unexpected location? |
+| Activity Time | Did the activity occur at an unusual time? |
+| User Activity | Was there an unexpected login or API call? |
+| Network Traffic | Is there unusual inbound or outbound communication? |
+| Business Impact | Does the affected resource support a critical application? |
+| Historical Activity | Is this behavior normal for the resource? |
+
+**Important:** Do not classify a finding based only on its severity or geographic location. Investigate multiple indicators before reaching a conclusion.
+
+---
+
+## 4. GuardDuty Severity Levels
+
+Amazon GuardDuty categorizes findings into three severity levels.
+
+| Severity | Score | Priority | Action |
+|---|---|---|---|
+| High | 7.0–8.9 | P1 | Investigate and respond immediately |
+| Medium | 4.0–6.9 | P2 | Investigate and validate the activity |
+| Low | 1.0–3.9 | P3 | Review and monitor the activity |
+
+**Note:** GuardDuty severity scores range from 1.0 to 10.0. Criticality and response priority should also consider business impact and the context of the finding.
+
+---
+
+## 5. Finding Classification
+
+After investigating a finding, classify it into one of the following categories.
+
+### 5.1 True Positive
+
+The detected activity is genuinely malicious or unauthorized.
+
+**Example:**
+- An EC2 instance communicates with a known malicious IP address.
+- An IAM user performs unauthorized API operations.
+- An attacker gains unauthorized access to an AWS resource.
+
+**Action:** Raise a security incident and follow the incident response process.
+
+### 5.2 False Positive
+
+The detection is incorrect or does not represent the suspected activity.
+
+**Example:**
+- A detection is based on incorrect or incomplete context.
+- An activity is incorrectly identified as suspicious.
+
+**Action:** Document the investigation evidence and review detection configuration if necessary.
+
+### 5.3 Benign Positive
+
+The detected activity actually occurred, but it was legitimate and authorized.
+
+**Example:**
+- An administrator accesses AWS resources from a new geographical location.
+- An application communicates with a new external service as part of an approved deployment.
+
+**Action:** Document the business justification and monitor the activity.
+
+---
+
+## 6. Investigation Tools and Log Sources
+
+The following AWS services and log sources help investigate GuardDuty findings.
+
+| AWS Service | Purpose |
+|---|---|
+| Amazon GuardDuty | Detect suspicious activities and generate findings |
+| AWS CloudTrail | Investigate API calls and account activities |
+| VPC Flow Logs | Analyze network traffic |
+| Amazon CloudWatch | Monitor logs, metrics, and alerts |
+| AWS Security Hub | Centralize and prioritize security findings |
+| AWS Config | Review resource configuration changes |
+| Amazon S3 Data Events | Investigate S3 object-level activities |
+| Amazon Inspector | Identify software vulnerabilities |
+
+### Important Log Files
+
+For Linux-based EC2 instances:
+
+**Authentication logs:**
+
+```bash
+/var/log/secure
+```
+
+**System logs:**
+
+```bash
+/var/log/messages
+```
+
+These logs can help investigate authentication attempts and system-level activities.
+
+---
+
+## 7. How to Report a GuardDuty Finding
+
+When a genuine or suspected security incident is identified, prepare an incident report.
+
+There are two types of reporting:
+
+### 7.1 Internal Reporting
+
+Report the incident to the appropriate team:
+
+- Security Operations Center (SOC).
+- Cloud Security Team.
+- Incident Response Team.
+- AWS Infrastructure Team.
+
+Use the organization's ticketing or incident management system.
+
+### 7.2 AWS Escalation
+
+If AWS assistance is required for an AWS security incident, contact AWS Support or use the appropriate AWS security incident response process.
+
+**Note:** Not every GuardDuty finding needs to be reported directly to AWS.
+
+---
+
+## 8. Security Incident Report Template
+
+Use the following template when documenting a security incident.
+
+### 8.1 Incident Details
+
+- Incident ID:
+- AWS Account ID:
+- AWS Region:
+- Detection Service: Amazon GuardDuty
+- Finding ID:
+- Finding Type:
+- Detection Date and Time:
+- Severity:
+- Incident Status: Open / Investigating / Resolved
+
+### 8.2 Affected Resource
+
+- Resource Type: EC2 / IAM / S3 / Other
+- Resource ID:
+- Resource Name:
+- Environment: Production / Development / Testing
+
+### 8.3 Threat Information
+
+- Source IP Address:
+- Destination IP Address:
+- Geographic Location:
+- Suspicious Activity:
+- Related IAM User or Role:
+
+### 8.4 Investigation Findings
+
+- What activity was detected?
+- Why is this activity suspicious?
+- Is the activity expected or unauthorized?
+- Are there any related security findings?
+- What logs were reviewed?
+- Is there evidence of compromise?
+
+### 8.5 Risk Assessment
+
+- Severity: Critical / High / Medium / Low
+- Business Impact:
+- Potential Data Exposure:
+- Potential Service Disruption:
+
+### 8.6 Actions Taken
+
+- Investigation completed:
+- Resource isolated (if required):
+- Unauthorized access revoked (if required):
+- Credentials rotated (if required):
+- Malware removed (if applicable):
+- Preventive measures implemented:
+
+### 8.7 Final Classification
+
+- Classification: True Positive / False Positive / Benign Positive
+- Root Cause:
+- Remediation Details:
+- Recommendations:
+
+### 8.8 Incident Closure
+
+- Incident Resolved: Yes / No
+- Resolved By:
+- Resolution Date:
+- Additional Comments:
+
+---
+
+## 9. Practical Scenario – Suspicious EC2 Communication
+
+### Scenario
+
+GuardDuty detects suspicious outbound communication from a production EC2 instance to an unknown external IP address.
+
+**Illustrative finding details:**
+
+| Attribute | Example |
+|---|---|
+| AWS Service | Amazon GuardDuty |
+| Resource Type | EC2 Instance |
+| Instance ID | i-0123456789abcdef0 |
+| Activity | Suspicious outbound communication |
+| Destination | Unknown external IP |
+| Severity | High |
+| Potential Risk | Malware / Command-and-Control communication |
+
+### Investigation Steps
+
+1. Open the Amazon GuardDuty console.
+2. Navigate to the Findings section.
+3. Select the suspicious finding.
+4. Identify the affected EC2 instance.
+5. Review the destination IP address and network activity.
+6. Check VPC Flow Logs for communication details.
+7. Review CloudTrail for suspicious API activities.
+8. Investigate the EC2 instance for potential malware or unauthorized access.
+9. Determine whether the activity is legitimate or malicious.
+
+### Remediation Steps
+
+If the instance is confirmed or strongly suspected to be compromised:
+
+1. Follow the incident response plan.
+2. Isolate the affected instance when appropriate.
+3. Preserve forensic evidence.
+4. Investigate the root cause.
+5. Remove malicious files and unauthorized access.
+6. Rotate potentially compromised credentials.
+7. Restore the workload from a trusted source if required.
+8. Verify that the environment is secure.
+9. Document the incident and close the security ticket after validation.
+
+---
+
+## 10. Incident Response Lifecycle
+
+The incident response process consists of the following stages:
+
+1. **Preparation:** Configure monitoring, logging, access controls, and response procedures.
+2. **Detection:** Identify suspicious activities using GuardDuty and other monitoring tools.
+3. **Analysis:** Investigate findings and determine the nature of the threat.
+4. **Containment:** Prevent further damage by isolating affected resources when necessary.
+5. **Eradication:** Remove malicious files, unauthorized access, and compromised configurations.
+6. **Recovery:** Restore affected resources and verify normal operations.
+7. **Lessons Learned:** Document the incident and improve security controls.
+
+---
+
+## 11. Important Points to Remember
+
+- GuardDuty detects potential security threats; it does not automatically confirm every finding as a security breach.
+- Investigate findings before taking corrective action.
+- Always correlate GuardDuty findings with CloudTrail, VPC Flow Logs, and other relevant evidence.
+- Prioritize findings based on severity, resource criticality, and business impact.
+- Document investigation findings and remediation activities.
+- Follow the organization's incident response and escalation procedures.
+
+---
+
+## 12. Official AWS Documentation
+
+- [Amazon GuardDuty Documentation](https://docs.aws.amazon.com/guardduty/)
+- [GuardDuty Finding Severity Levels](https://docs.aws.amazon.com/guardduty/latest/ug/guardduty_findings-severity.html)
+- [GuardDuty Finding Details](https://docs.aws.amazon.com/guardduty/latest/ug/guardduty_findings-summary.html)
+- [GuardDuty Remediation](https://docs.aws.amazon.com/guardduty/latest/ug/guardduty_remediate.html)
+- [AWS Security Incident Response](https://docs.aws.amazon.com/security-ir/latest/userguide/what-is-security-incident-response.html)
