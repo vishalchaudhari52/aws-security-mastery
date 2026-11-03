@@ -1,0 +1,54 @@
+
+# AWS Security and Abuse Management
+
+## 1. Security Authentication Logs
+
+Security authentication logs are stored at:
+
+```bash
+/var/log/secure
+```
+
+These logs contain authentication-related events and help investigate login attempts and potential security incidents.
+
+## 2. Acceptable Use Policy (AUP)
+
+An Acceptable Use Policy (AUP), also known as a Fair Use Policy, is a set of rules established by a service provider that defines how users can use its services and resources.
+
+AWS services must not be used, facilitated, or made available to others for the following activities:
+
+- **Illegal or fraudulent activities:** Using AWS services for unlawful or fraudulent purposes.
+- **Violating the rights of others:** Infringing upon the rights of individuals or organizations.
+- **Compromising security, integrity, or availability:** Performing activities that threaten the security, integrity, or availability of systems or networks.
+
+  Example: An attacker compromises a server and uses it to launch a Denial-of-Service (DoS) attack against another server.
+
+- **Threatening or encouraging violence:** Promoting terrorism, violence, or other serious harm.
+
+## 3. Who Can Raise an Abuse Complaint?
+
+An abuse complaint can be raised by:
+
+- AWS Abuse Team.
+- AWS customers or clients affected by abusive activities originating from an AWS-hosted resource.
+
+## 4. Actions to Take After Receiving an Abuse Report
+
+When an abuse notification is received, follow these steps:
+
+1. **Review the report:** Understand the content or activity mentioned in the abuse notification.
+
+2. **Investigate the incident:** Check relevant system logs and available evidence to identify the source and nature of the reported activity.
+
+3. **Take corrective action:** Stop the abusive activity and implement security measures to prevent recurrence.
+
+4. **Respond to the abuse report:** Reply directly to the abuse notification and explain:
+   - What caused the reported activity.
+   - What actions were taken to resolve the issue.
+   - What preventive measures have been implemented to avoid similar incidents.
+
+## 5. Important: Abuse Report Response Deadline
+
+**AWS may block your resources or suspend your AWS account if you fail to respond to an abuse notification within 24 hours.**
+
+Always treat abuse notifications as high-priority security incidents and respond promptly with investigation findings and corrective actions.
